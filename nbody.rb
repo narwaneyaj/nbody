@@ -8,7 +8,7 @@ class NbodySimulation < Gosu::Window
     super(640, 640, false)
     self.caption = "NBody simulation"
     @background_image = Gosu::Image.new("images/space.jpg", tileable: true)
-    puts "Type your simulation: The choices are"
+    puts "Type your simulation"
     text = open("simulations/#{gets.chomp}.txt")
     body = 1
     @bodies = []
@@ -26,7 +26,7 @@ class NbodySimulation < Gosu::Window
       end
       body += 1
     end
-    puts @bodys
+    puts @bodies
   end
 
   def update
